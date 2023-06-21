@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Test View</title>
+    <title>テストゲーム</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+        /* ゲーム画面のスタイル */
+        #game {
+            width: 400px;
+            height: 300px;
+            border: 1px solid #000;
+            position: relative;
+            overflow: hidden;
         }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        #paddle {
+            width: 80px;
+            height: 10px;
+            background-color: #000;
+            position: absolute;
+            bottom: 0;
+            left: 160px;
         }
-
-        h1 {
-            color: #333;
-            text-align: center;
+        #ball {
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
         }
-
-        p {
-            margin-bottom: 10px;
+        .block {
+            width: 50px;
+            height: 20px;
+            background-color: #00f;
+            position: absolute;
+            top: 20px;
+            left: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to the Test View!</h1>
-        <p>This is a sample test view for your mini app.</p>
-        <p>Feel free to customize this view to fit your needs.</p>
-        <p>You can add more HTML elements and apply CSS styles as desired.</p>
-    </div>
+    <h1>テストゲーム</h1>
+    <div id="game">
+        <div id="paddle"></div>
+        <div id="ball"></div>
+        <!-- ブロックを表示 -->
+        
+
+    <!-- JavaScriptファイルの読み込み -->
+    <script src="{{ asset('js/test.js') }}"></script>
 </body>
 </html>
