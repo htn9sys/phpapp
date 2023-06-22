@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\TestModel;
@@ -18,7 +19,9 @@ class TestController extends Controller
         $score = $model->getScore();
         $blocks = $model->getBlocks();
 
-        return view('test.index', compact('score', 'blocks'));
+        return view('test.index', [
+            'score' => $score,
+            'blocks' => $blocks,
+        ]);
     }
 }
-?>

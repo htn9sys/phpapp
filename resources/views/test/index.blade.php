@@ -44,8 +44,9 @@
     <div id="game">
         <div id="paddle"></div>
         <div id="ball"></div>
-        <!-- ブロックを表示 -->
-        
+        <!-- ブロックを表示するための要素 -->
+        <div id="blocks"></div>
+    </div>
 
     <!-- JavaScriptファイルの読み込み -->
     <script src="{{ asset('js/test.js') }}"></script>

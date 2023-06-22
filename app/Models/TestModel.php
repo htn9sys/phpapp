@@ -1,4 +1,5 @@
 <?php
+
 class TestModel
 {
     private $score;
@@ -7,14 +8,14 @@ class TestModel
     public function __construct()
     {
         $this->score = 0;
-        $this->blocks = array();
+        $this->blocks = [];
 
         // ブロックの配置
         for ($i = 0; $i < 6; $i++) {
             for ($j = 0; $j < 8; $j++) {
                 $top = 20 + ($i * 30);
                 $left = 20 + ($j * 55);
-                $this->blocks[] = array('top' => $top, 'left' => $left);
+                $this->blocks[] = ['top' => $top, 'left' => $left];
             }
         }
     }
